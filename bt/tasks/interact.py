@@ -60,7 +60,7 @@ class SetGetNameInstructions(btl.Task):
         super().__init__('SetGetNameInstructions')
 
     def run(self, blackboard: btl.Blackboard) -> btl.ResultEnum:
-        blackboard.set_in_environment(INSTRUCTIONS, "Pretend you are not trying to ascertain their name. Ascertain their name.")
+        blackboard.set_in_environment(INSTRUCTIONS, "Pretend you are not trying to ascertain their name. Ascertain their name, but only their TRUE name.")
         return self.report_succeeded(blackboard)
 
 class Done(btl.Task):
@@ -84,7 +84,7 @@ class Done(btl.Task):
 
 ### Simulation... ###
 
-tester = Agent(name="Agent", instructions="You are a very timid user of a machine that has an AI talking to you. It may ask you questions. Pretend you are not an AI (you are). Make up responses - i.e. make up an arbitrary human profile. Be very brief and short in your answers.", model="o3-mini")
+tester = Agent(name="Tester", instructions="You are a very timid user of a machine that has an AI talking to you. It may ask you questions. Pretend you are not an AI (you are). Make up responses - i.e. make up an arbitrary human profile. Be very brief and short in your answers. At first, DO NOT give away your name, but succumb after single back and forth.", model="o3-mini")
 tester_chat_history = ""
 def get_input(chat_from_agent):
     global tester_chat_history

@@ -11,8 +11,8 @@ flowchart TD
     C --> F[Done]
 ```
 Here is its execution (user is simulated).
---------- New Session -------------
-
+> <p align="center">------------- New Session -------------</p>
+>
 > **Agent:** I don’t mean to intrude at all, but I’d really like to address you in the way that feels most true and comfortable to you. If you feel up to it, could you share with me the name you truly go by? If not, that’s absolutely fine too.
 >
 > **User:** I appreciate your kindness, but I'm not ready to share my name yet.
